@@ -1,31 +1,33 @@
-function varFunc() {
-    var prevous = 0;
-    var current = 1;
-    var i;
-    var temp;
-
-    for (i = 0; i < n; i += 1) {
-        temp = prevous;
-        prevous = current;
-        current = temp + current;
-    }
+function varFunc(){
+  var previous = 0;
+  var current = 1;
+  var i;
+  var temp;
+  
+  for(i = 0; i < 10; i+=1){
+    temp = previous;
+    previous = current;
+    current = temp + current;
+  }
+  console.log(current) || displayInPreview(current);
 }
 
-function letFunc() {
-    let prevous = 0;
-    let current = 1;
-    
-    for (let i = 0; i < n; i += 1) {
-        let temp = prevous;
-        prevous = current;
-        current = temp + current;
-    }
-
-    console.log(current) || displayInPreview(current);
+function letFunc(){
+  let previous = 0;
+  let current = 1;
+  
+  for(let i = 0; i < 10; i+=1){
+    let temp = previous;
+    previous = current;
+    current = temp + current;
+  }
+  
+  console.log(previous) || displayInPreview(previous);
 }
 
 varFunc();
 letFunc();
+
 
 // display in plunker preview
 function displayInPreview(string) {
